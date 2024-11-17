@@ -1,5 +1,4 @@
 import { getAllPosts } from "@/lib/posts";
-import Link from "next/link";
 
 export default function Home() {
 
@@ -7,15 +6,19 @@ export default function Home() {
 
   return (
     <div>
-      <h2> Sushanth Nandeti Blog </h2>
         <ul>
-            {posts.map((post) => {
 
-                <li>
-                    <Link href = {`/posts/${post.slug}`}> {posts.title}</Link>
-                    <p> {post.date} </p>
+            <div className="home-feed">
+            {posts.map((post) => (
+                <li key = {post.slug}>
+                     <p> {post.date} </p>
+                     <a href = {`/posts/${post.slug}`}> {post.title} &nbsp; &nbsp; &nbsp; &nbsp; </a> 
+                     
                 </li> 
-            })}
+            ))}
+
+            </div>
+            
         </ul>
     </div>
   );
