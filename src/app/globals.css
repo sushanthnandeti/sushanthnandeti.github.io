@@ -72,9 +72,15 @@ header {
   max-width: 1200px;
   border-radius: 5px;
   padding: 2rem;
-  background-color: #56a1ec;
+  background-color: #0c57a1;
   color: rgb(255, 255, 255);
   text-align: center;
+}
+
+
+header:hover {
+  background-color: #5caeff;
+  transition: background-color 0.5s ease; /* 0.5 seconds for a smoother effect */
 }
 
 footer {
